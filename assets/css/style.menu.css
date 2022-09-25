@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #3d3c3c;
+    display: flex;
+}
+
+#logo{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+}
+#mobile_btn{
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 50px;
+    padding: 10px;
+}
+#sair_btn{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+}
+nav{
+    position: absolute;
+    margin-left: 0px;
+    width: 400px;
+    height: 600px;
+    background-color: #817e7e;
+    transition: all 0.2s;
+}
+
+.menu{
+    margin-left: 20px;
+    background-color: #fff;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.sub_menu{
+    margin-left: 40px;
+    background-color: black;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+#form_filter_access{
+    text-align: center;
+
+}
