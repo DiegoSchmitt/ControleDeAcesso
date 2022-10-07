@@ -1,7 +1,7 @@
 <?php
 require 'parts/header.php';
 require 'config/verifySession.php';
-require '../autoload.php';
+require 'class/Users.php';
 
 $user = new Users();
 $usersList = $user->getAll();

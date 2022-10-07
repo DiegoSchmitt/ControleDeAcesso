@@ -1,7 +1,7 @@
 <?php
 require '../parts/header.php';
-include '../class/users.class.php';
-include '../class/records.class.php';
+include '../class/Users.php';
+include '../class/Records.php';
 require '../config/verifySession.php';
 
 $users = new Users;
@@ -110,7 +110,7 @@ else if(empty($date) and ($data_user) and (count($data_user)==14)){
 
 
 //filtrar acessos pelo nome do usuário
-else if(empty($date) and $data_user){
+else if(empty($date) and (count($data_user)>0)){
     ?>
         <table border="1">
             <thead>
@@ -126,6 +126,7 @@ else if(empty($date) and $data_user){
     <?php
     foreach($data_user as $item){
         $data_records = $records->filterRecordsById($item['id']);
+
         foreach($data_records as $item_records){
             ?>
             <tbody>

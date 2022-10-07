@@ -1,5 +1,6 @@
 <?php
-class Users{
+
+class Users {
     private $pdo;
     public function __construct(){
          $this->pdo = new pdo("mysql:dbname=projeto_registro_entrada_saida;host=localhost", "root", "");
@@ -72,15 +73,14 @@ class Users{
          }
      }
 
-     public function editUser($id, $name, $email, $id_access, $photo, $password, $level){
-            $sql = "UPDATE users SET name = :name, email = :email, id_access = :id_access, photo = :photo, password = :password, level = :level  WHERE id = :id";
+     public function editUser($id, $name, $email, $id_access, $photo, $level){
+            $sql = "UPDATE users SET name = :name, email = :email, id_access = :id_access, photo = :photo, level = :level  WHERE id = :id";
             $sql = $this->pdo->prepare($sql);
             $sql->bindValue(":id", $id);   
             $sql->bindValue(":name", $name);
             $sql->bindValue(":email", $email);
             $sql->bindValue(":id_access", $id_access);
             $sql->bindValue(":photo", $photo);
-            $sql->bindValue(":password", $password);
             $sql->bindValue(":level", $level);
             $sql->execute();
      }
@@ -183,7 +183,6 @@ class Users{
         $sql = $this->pdo->query($sql);
         if($sql->rowCount() > 0){
             return $sql->fetchAll();
-            return true;
         } else{
             return false;
         }

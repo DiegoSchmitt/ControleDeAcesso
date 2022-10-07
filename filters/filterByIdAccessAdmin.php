@@ -1,6 +1,7 @@
 <?php
 require '../parts/header.php';
-include '../class/users.class.php';
+include '../class/Users.php';
+include '../class/Records.php';
 require '../config/verifySession.php';
 
 $users = new Users;

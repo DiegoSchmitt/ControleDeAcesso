@@ -1,7 +1,8 @@
 <?php
 require 'parts/header.php';
 date_default_timezone_set('America/Sao_Paulo');
-require 'autoload.php';
+require 'class/Users.php';
+require 'class/Records.php';
 $users = new Users;
 $records = new Records;
 $infoUsers = $users->getAll();

@@ -1,11 +1,22 @@
+/*
+.color1 { #f2e8c4 };
+.color2 { #98d9b6 };
+.color3 { #3ec9a7 };
+.color4 { #2b879e };
+.color5 { #616668 };
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:wght@300;500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 header{
     width: 100%;
     height: 60px;
-    background-color: #3d3c3c;
+    background-color: #2b879e;
     display: flex;
 }
 
@@ -14,16 +25,17 @@ header{
     justify-content: center;
     align-items: center;
     text-align: left;
-    color: #fff;
+    color: #f2e8c4;
     font-size: 30px;
     padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
 }
 #mobile_btn{
     flex: 1;
     justify-content: center;
     text-align: center;
     align-items: center;
-    color: #fff;
+    color: #f2e8c4;
     cursor: pointer;
     font-size: 50px;
     padding: 10px;
@@ -33,36 +45,88 @@ header{
     justify-content: center;
     align-items: center;
     text-align: right;
-    color: #fff;
+    color: #f2e8c4;
     text-decoration: none;
-    font-size: 30px;
     padding: 10px;
 }
+
+#sair_btn span{
+    font-size: 40px;
+}
+
+.photo{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.photo img{
+    width: 150px;
+}
+
 nav{
     position: absolute;
     margin-left: 0px;
     width: 400px;
     height: 600px;
-    background-color: #817e7e;
+    background-color:#2b879e;
     transition: all 0.2s;
+    color: #f2e8c4;
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu{
     margin-left: 20px;
-    background-color: #fff;
+    background-color: #2b879e;
     text-decoration: none;
     list-style: none;
     cursor: pointer;
     transition: all 0.2s;
+    margin-top: 20px;
+    font-weight: bold;
 }
 .sub_menu{
     margin-left: 40px;
-    background-color: black;
-    color: #fff;
+    background-color:  #2b879e;
+    color: #f2e8c4;
     transition: all 0.2s;
+    margin-bottom: 10px;
+}
+.menu li a{
+    text-decoration: none;
+    color: #f2e8c4;
 }
 
 #form_filter_access{
     text-align: center;
+}
 
+#alter_user, #alter_adm, #add_new_user, #add_new_admin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#edit_user_name, #edit_user_id, #edit_user_email{
+    margin-top: 10px;
+}
+
+#edit_adm_name, #edit_adm_id, #edit_adm_email{
+    margin-top: 10px;
+}
+.btn-filter{
+    background-color: #616668;
+    color: #f2e8c4;
+    height: 25px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 2px;
+    border: #f2e8c4;
+}
+
+.filter-input{
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    border: #f2e8c4;
 }

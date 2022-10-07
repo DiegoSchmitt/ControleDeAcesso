@@ -1,7 +1,8 @@
 <?php
 require "../parts/header.php";
-require '../autoload.php';
+require '../class/Users.php';
 require '../config/verifySession.php';
+
 
 $user = new Users;
 $data =  $user->getId($_GET['id']);

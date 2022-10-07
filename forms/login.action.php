@@ -1,6 +1,6 @@
 <?php
 require '../parts/header.php';
-require '../autoload.php';
+require '../class/Users.php';
 
 
 $user = new Users;

@@ -1,14 +1,12 @@
 <?php
 require '../parts/header.php';
-require '../autoload.php';
+require '../class/Users.php';
 require '../config/verifySession.php';
 $user = new Users();
 if(isset($_POST['email']) && !empty($_POST['email'])){
     $name = addslashes($_POST['name']);
     $email = addslashes($_POST['email']);
     $id_access = addslashes($_POST['id_access']);
-    $password = addslashes($_POST['password']);
-    $password = password_hash($password, PASSWORD_DEFAULT);
     $level = addslashes($_POST['level']);
     $id = addslashes($_POST['id']);
 
@@ -16,7 +14,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
             $photo = $_FILES['photo'];
             if($photo['error']){
                 $filename = 'defaul.png';
-                $user->editUser($id, $name, $email, $id_access, $filename, $password, $level);
+                $user->editUser($id, $name, $email, $id_access, $filename, $level);
                 if($_SESSION['level'] == 1){
                     header("Location:../master.php");
                     exit;
