@@ -67,7 +67,7 @@
 
 
 
-.login, .filter, .add{
+.login, .filter, .add, .edit{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -83,16 +83,16 @@
     width: 300px;
     height: 300px;
 }
-.add{   
+.add, .edit{   
     width: 300px;
     height: 450px;
 }
 
-.login form h3, .filter form h2, .add form h3{
+.login form h3, .filter form h2, .add form h3, .edit form h3{
     color:  #f2e8c4; 
     margin-bottom: 25px;
 }
-.login form input, .filter form input, .add form input, .add form select{
+.login form input, .filter form input, .add form input, .add form select, .edit form input, .edit form select{
     margin-bottom: 15px;
     width: 200px;
     height: 20px;
@@ -109,18 +109,18 @@
     margin-top: 10px;
 }
 
-.login a, .add a{
+.login a, .add a, .edit a{
     text-decoration: none;
     color: #f2e8c4;
 }
 
-.login span, .filter span, .add span{
+.login span, .filter span, .add span, .edit span{
     color: #f2e8c4;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-right: 10px;
 }
-.add p{
+.add p, .edit p{
     color: #f2e8c4;
 }

@@ -1,6 +1,6 @@
 <?php
 require '../parts/header.php';
-require '../autoload.php';
+require '../class/Users.php';
 require '../config/verifySession.php';
 $user = new Users();
 if(isset($_POST['email']) && !empty($_POST['email'])){
