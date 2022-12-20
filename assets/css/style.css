@@ -57,11 +57,11 @@
     text-align: center;
     justify-content: center;
     padding: 30px;
-    background-color: rgb(0, 26, 73);
-    color: #ddd;
+    background-color:#2b879e;
+    color: #f2e8c4;
     font-size: 40px;
     border-radius: 10px;
-   /* position: absolute;*/
+    position: absolute;
 }
 
 
@@ -123,4 +123,9 @@
 }
 .add p, .edit p{
     color: #f2e8c4;
+}
+
+.error{
+    margin-bottom: 20px;
+    color: rgb(245, 144, 144);
 }

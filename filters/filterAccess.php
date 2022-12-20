@@ -36,6 +36,7 @@ if(!empty($date) && !$data_user){
     $data_records = $records->filterRecordsByDate($date);
     if($data_records){
         ?>
+            <div class="filter-access">
                 <table border="1">
                     <thead>
                         <tr>
@@ -65,6 +66,7 @@ if(!empty($date) && !$data_user){
         }
         ?>
                 </table>
+            </div>
         <?php
     }else{
         echo 'nenhum ressultado!';

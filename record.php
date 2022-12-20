@@ -9,11 +9,14 @@ $infoUsers = $users->getAll();
 $date = date('Y/m/d');
 $hour = date("H:i:s");
 $access = false;
+$id_access = "";
 
 //Recebe os dados do input
 if(isset($_GET['access']) && !empty($_GET['access'])){
     $id_access = addslashes($_GET['access']);
 }
+
+
 
 //verifica se tem essa credencial no banco de dados
 foreach($infoUsers as $item){
@@ -25,7 +28,7 @@ foreach($infoUsers as $item){
 }
 if($access != true){
     echo "<div class='vredential-not-found'>Credencial não cadastrada!</div>";
-    header("Refresh: 5;url=http://192.168.1.130/");
+    header("Refresh: 5; index.php");
 }
 
 //retorna os dados do ultimo acesso
@@ -40,7 +43,7 @@ if(!$lastAcess){
         <h2>Entrada autorizada</h2>
     </div>
     <?php
-    header("Refresh: 5;url=http://192.168.1.130/");
+    header("Refresh: 5; index.php");
 }
 
 //registra a saída.
@@ -52,7 +55,7 @@ if($lastAcess > 0 && $lastAcess['exit_date'] == null){
         <h2>Saída autorizada</h2>
     </div>
     <?php
-    header("Refresh: 5;url=http://192.168.1.130/");
+    header("Refresh: 5; index.php");
 }else{
     $records->addEntry($id_user, $date, $hour);
     ?>
@@ -61,6 +64,6 @@ if($lastAcess > 0 && $lastAcess['exit_date'] == null){
         <h2>Entrada autorizada</h2>
     </div>
     <?php
-    header("Refresh: 5;url=http://192.168.1.130/");
+    header("Refresh: 5; index.php");
 }
 

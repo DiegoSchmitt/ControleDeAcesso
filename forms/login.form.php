@@ -1,5 +1,11 @@
+<?php
+if(!$_SESSION['error']){
+    $_SESSION['error']="";
+}
+?>
 <div class="login">
     <form method="post" action="forms/login.action.php">
+        <h4 class="error"><?=$_SESSION['error'];?></h4>
         <h3>
             <span class="material-symbols-outlined">
                 login

@@ -25,7 +25,8 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['password']
             exit;
     }
     else{
-        echo"Email e/ou senha inválido!";
+        header("Location:../admin.php");
+        $_SESSION['error'] = "Email e/ou senha inválidos!";
     }
 }
 ?>
