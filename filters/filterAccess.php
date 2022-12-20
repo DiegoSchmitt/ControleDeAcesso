@@ -1,3 +1,45 @@
+<style>
+    
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+*{
+ margin:0;
+ padding: 0;
+ outline: 0;
+}
+
+table{
+ margin:auto;
+ z-index: 2;
+ border-collapse: collapse;
+ border-spacing: 0;
+ box-shadow: 0 2px 15px rgba(64,64,64,.7);
+ border-radius: 12px 12px 0 0;
+
+}
+td , th{
+ padding: 15px 20px;
+ text-align: center;
+ 
+
+}
+th{
+ background-color: #616668;
+ color: #f2e8c4;
+ font-family: 'Open Sans',Sans-serif;
+ font-weight: 200;
+ text-transform: uppercase;
+
+}
+tr{
+ width: 100%;
+ background-color: #f2e8c4;
+ font-family: 'Montserrat', sans-serif;
+}
+tr:nth-child(even){
+ background-color: #f2e8c4;
+}
+</style>
+
 <?php
 require '../parts/header.php';
 include '../class/Users.php';
@@ -10,7 +52,7 @@ $records = new Records;
 $name = $_POST['filter_name'];
 $id_access = $_POST['filter_idAccess'];
 $date = $_POST['filter_date'];
-//$filter_time = $_POST['filter_time'];
+
 
 //filtrar usuário por id
 if(empty($name) and !empty($id_access)){
